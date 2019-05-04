@@ -1,0 +1,431 @@
+//number 1
+#include <iostream>
+#include <cmath>
+#include <string>
+#define PACKAGE_A 995
+#define PACKAGE_B 1495
+#define PACKAGE_C 1995
+#define Additional_A 20
+#define Additional_B 10 
+
+using namespace std;
+
+int main()  
+{
+char package;
+int hours;
+
+pack:
+cout<< "Please choose from PACKAGE A or PACKAGE B or PACKAGE C." << endl << endl; 
+cout<< "Package A: P995/mo with 10 hrs of access are provided. Additional hours are P20/hr " << endl; 
+cout<< "Package B: P1495/mo 20 with hrs of access are provided. Additional hours are P10/hr " << endl;
+cout<< "Package C: P1995/mo of with unlimited access is provided." << endl; 
+cout<< "\nWhich among the package you wish to avail?" << endl << endl;
+cout<< "Package: ";
+cin >> package;
+
+switch(package)
+{
+	case 'A':
+	case 'a':
+	
+		cout <<"\nHow many hour/s do you wish to use in this Package (A)?\n";
+		cin >> hours;
+		
+		if (hours <= 10)
+		{
+			cout<< "\n The Package deal will cost: " << PACKAGE_A<< endl;
+			cout << "\n Thank you! \n Enjoy your line connection!";
+		
+		}
+		else {
+			int A1= (hours - 10) * 20 + PACKAGE_A; 
+			cout << "\n The Package deal will cost:  " << A1<< endl;
+			cout << "\n Thank you! \n Enjoy your line connection!";
+		}
+		break;
+	
+	case 'B':
+	case 'b':
+			cout <<"\nHow many hour/s do you wish to use in this Package (B)?" <<'\n';
+		cin >> hours;
+		if (hours <= 20)
+		{
+			cout<< "\n The Package deal will cost: " << PACKAGE_B<< endl;
+			cout << "\n Thank you! \n Enjoy your line connection!";
+		
+		}
+		else {
+			int B1= (hours - 20) * 10 + PACKAGE_B; 
+			cout << "\n The Package deal will cost: " << B1<< endl;
+			cout << "\n Thank you! \n Enjoy your line connection!";
+		}
+		break;
+	case 'C':
+	case 'c':
+		
+			cout<< "\n The Package deal will cost: " << PACKAGE_C<< endl;
+			cout << "\n Thank you! \n Enjoy your line connection!";
+		
+		break;
+		
+		default:
+		cout << "Package not available, choose between PackageA,PackageB,and PackageC\n";
+		
+		goto pack;
+}
+	return 0;
+}
+
+
+
+//number2
+#include <iostream>
+
+using namespace std;
+
+int main ()
+
+{
+
+	int ironman,bucky,captainamerica,doctorstrange;
+
+	double charge;
+
+	char choice;
+
+	captainamerica = 35;
+
+	
+
+	cout <<"Enter the gallon that was used.: " << endl;
+
+	cin >> ironman;
+
+	cout <<""<<endl;
+
+	cout <<"Are there any late charges? [Y]es or [N]o" <<endl;
+
+	cin >> choice;
+
+
+
+	switch (choice)
+
+	{
+
+		case 'Y':
+
+		case 'y':
+
+			cout <<"Input how many months due: " <<endl;
+
+			cin >>bucky;
+
+			cout <<""<<endl;
+
+			cout <<"Input total amount of previous bill/s: " <<endl;
+
+			cin >>doctorstrange;
+
+			cout <<""<<endl;
+
+			cout <<"Total_water bill is: "<< endl;
+
+			cout <<( (captainamerica+(ironman*1.1)+(bucky*20)+doctorstrange))<<endl;
+
+			break;
+
+		case 'N':
+
+		case 'n':
+
+			cout <<"Total water bill is: " <<endl;
+
+	 		cout << (captainamerica+(ironman*1.1)) << endl;
+
+			break;
+
+		default:
+
+			cout<< "Error. The user Must enter the valid amount given: " <<endl;
+
+			
+
+			
+
+	}
+
+	
+
+	 
+
+	 return 0;
+
+	
+
+}
+
+//number3
+#include <iostream>
+#include <conio.h>
+#include <cmath>
+
+using namespace std;
+
+
+int main()
+
+{
+
+	int xander, ford;
+
+	double Vale,zaron;
+
+	zaron = 2.5;
+
+	
+
+	cout << "Enter the value of X \n";
+
+	cin >> xander;
+
+	
+
+	cout << "Enter the value of Y \n";
+
+	cin >> ford;
+
+	
+
+	if (xander > 0 && xander < 3)  
+
+	{
+
+	switch (xander)
+
+	{	case 1:
+
+			if ( ford > 1 && ford < 5 )
+
+			{   
+
+				Vale = xander*ford*zaron;
+
+				cout << "\t V = ";
+
+				cout << Vale;
+
+			}		
+
+			else
+
+			{
+
+				Vale = ((xander + ford) / zaron);
+
+				cout << "\t V = ";
+
+				cout << Vale;
+
+			}
+
+				break;
+
+		case 2:
+
+			if (ford <= 5)
+
+			{
+
+				Vale = (xander - (sqrt( ford + zaron)));
+
+				cout << "\t V = ";
+
+				cout << Vale;
+
+			}
+
+			else
+
+			{	
+
+				Vale = ((xander - ford) / zaron );
+
+				cout << "\t V = ";
+
+				cout << Vale;
+
+			}
+
+			break;
+
+	}	
+
+	}
+
+	else 
+
+		{		Vale = xander + ford + zaron;
+
+				cout << "\t V = ";
+
+				cout << Vale;
+
+		}
+
+		
+
+	return 0;
+
+
+
+}
+
+//number4
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	double first, second, third;
+	cout<<"First number: ";
+	cin>>first;
+	cout<<"Second number: ";
+	cin>>second;
+	cout<<"Third number: ";
+	cin>>third;
+	
+	if (first>=second && first>=third)
+	cout<<endl<<"Largest number: "<<first;
+
+	else if (second>=first && second>=third)
+	cout<<endl<<"Largest number: "<<second;
+
+	else if (third>=first && 3>=second)
+	cout<<endl<<"Largest number: "<<third;
+return 0;
+}
+
+//number5
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int siomai;
+	cout<<"Counting........"<<endl;
+	for(siomai=1;siomai<31;siomai++)
+
+{
+	if (siomai>10)
+	siomai=siomai+1;
+	else
+	siomai=siomai;
+	cout<<siomai<<", ";
+}
+	
+return 0;
+}
+
+//number6
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int cookies, cookies1 = 0, cookies2 = 1, pizza;
+
+
+    cout << "The Fibonacci Sequence: " << endl;
+
+    for (cookies = 1; cookies <= 18; ++cookies)
+    {
+        if(cookies == 1)
+        cout << cookies1 << ", ";
+            
+        else if(cookies == 2)
+        cout << cookies2 << ", ";
+            
+        pizza = cookies1 + cookies2 ;
+        cookies1 = cookies2;
+        cookies2 = pizza;
+        
+        cout << pizza <<", ";
+    }
+    return 0;
+
+}
+
+//number 7
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int numero, total = 0;
+	
+	cout << "Kindly and gently enter a number: " ;
+	cin >> numero;
+	
+	for (int i=numero; i>=1; i--){
+		total = total + i;
+	}
+	
+	cout << endl << "The sum of numbers from 1 to " << numero << " is: " << total << endl;
+	
+	
+return 0;
+}
+
+//number8
+#include <iostream> 
+
+using namespace std;
+
+int main()
+{
+    int times, times2;
+    
+
+    cout << "Enter a number: ";
+    cin >> times;
+    cout<<"--------------------------------------------------"<<endl;
+    cout << "Multiplication table of " << times << ": "<<endl;
+    
+    for (times2 = 1; times2 <= 10; times2++) 
+    {
+       	int product = times * times2;
+        cout << times << " X " << times2 << " = " << product<<endl;
+    }
+
+    return 0;
+}
+
+//number9
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+    int rows, columns;
+
+    cout << "Number of rows: ";
+    cin >> rows;
+    cout << "Number of columns: ";
+    cin >> columns;
+    cout << endl;
+    
+    for (int row = 1; row <= rows; ++row) 
+    {
+        for (int col = 1; col <= columns; ++col) 
+        {
+            cout << "\t * ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
